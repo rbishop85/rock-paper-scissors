@@ -66,5 +66,3 @@ if (isPlayingGame){
 }
 
 }
-
-// playGame();
