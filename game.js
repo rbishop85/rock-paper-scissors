@@ -23,27 +23,31 @@ function playGame(){
 
 // Prompt player for choice
 var playerChoice = prompt("What do you choose?\n[R]ock, [P]aper or [S]cissors!\n(Please only key in first letter.)");
+
 // Make sure choice is in Upper Case
 var playerChoice = playerChoice.toUpperCase();
-// Verify that player selected appropriate letter or cancel out
+
+// Verify that player selected appropriate letter or restart
 if ( !compChoices.includes(playerChoice)){
     alert("That is not a valid choice!")
     return playGame();
 }
 
+//Broadcast Player's Choice
+alert("Player chose: " + names[playerChoice]);
 
-alert("Player chose : " + playerChoice)
 // Get a random choice for the computer
-var computer = Math.floor(Math.random() * compChoices.length);
-// Broadcast Computer's Choice
-alert("Computer chose " + compChoices[computer]);
+var index = Math.floor(Math.random() * compChoices.length);
+var computer = compChoices[index];
 
+// Broadcast Computer's Choice
+alert("Computer chose: " + names[computer]);
 
 // Compare Results
-if (playerChoice === compChoices[computer]) {
+if (playerChoice === computer) {
     ties++;
     alert("It was a tie!");
-} else if (winConditions[playerChoice] === compChoices[computer]) {
+} else if (winConditions[playerChoice] === computer) {
     wins++;
     alert("Player won!");
 } else {
@@ -61,16 +65,3 @@ if (isPlayingGame){
 }
 
 playGame();
-
-console.log("Wins: " + wins);
-console.log("Losses: " + losses);
-console.log("Ties: " + ties);
-
-// Compare user's choice to the computer's choice
-
-    // If we meet a win condition
-        // tally the win
-    // If we meet a loss
-        // tally the loss
-    //If we meet a tie
-        // tally the tie
