@@ -1,3 +1,6 @@
+var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", playGame);
+
 // Potential choices
 var compChoices = ["R", "P", "S"];
 
@@ -64,4 +67,4 @@ if (isPlayingGame){
 
 }
 
-playGame();
+// playGame();

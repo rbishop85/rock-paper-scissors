@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-size: 300%;
+    margin-top: 300px;
+}
+
+#generate {
+    border: 5px solid black;
+    background-color: hsl(360, 91%, 36%);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
+      0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 100%;
+    padding: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+  }
