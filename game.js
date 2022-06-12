@@ -1,3 +1,4 @@
+// Code for button to start game
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", playGame);
 
@@ -36,32 +37,33 @@ if ( !compChoices.includes(playerChoice)){
     return playGame();
 }
 
-//Broadcast Player's Choice
-alert("Player chose: " + names[playerChoice]);
-
-// Get a random choice for the computer
+// Random selection for computer
 var index = Math.floor(Math.random() * compChoices.length);
 var computer = compChoices[index];
 
-// Broadcast Computer's Choice
-alert("Computer chose: " + names[computer]);
+// Determine and display final Results
+var final = "";
 
-// Compare Results
 if (playerChoice === computer) {
     ties++;
-    alert("It was a tie!");
+    final = "It was a tie!";
 } else if (winConditions[playerChoice] === computer) {
     wins++;
-    alert("Player won!");
+    final = "Player won!";
 } else {
     losses++;
-    alert("Player lost!");
+    final = "Player lost!";
 }
 
-alert("Stats:\nLosses: "+losses+"\nWins: "+wins+"\nTies: "+ties);
-var isPlayingGame = confirm("Do you want to play again?");
+alert("Player chose: " + names[playerChoice] + "\nComputer chose: " + names[computer] + "\n" + final);
 
-if (isPlayingGame){
+// Display total stats
+alert("Stats:\nWins: " + wins + "\nLosses: " + losses + "\nTies: " + ties);
+
+// Ask player if they wish to play again
+var continuePlaying = confirm("Do you want to play again?");
+
+if (continuePlaying){
     playGame();
 }
 

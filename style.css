@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(72, 72, 72, 1);
+}
+
 h1 {
     text-align: center;
     font-size: 300%;
@@ -6,14 +10,19 @@ h1 {
 
 #generate {
     border: 5px solid black;
-    background-color: hsl(360, 91%, 36%);
+    background-color: rgba(0, 123, 109, 1);
     border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-      0px;
-    color: hsl(0, 0%, 100%);
-    display: inline-block;
+    color: rgba(224, 225, 221, 1);
     font-size: 100%;
     padding: 10px 10px;
     text-align: center;
     cursor: pointer;
+  }
+
+#generate:hover, button:focus {
+    box-shadow: 0 0 20px rgba(25, 26, 29, 1) inset, 5px 5px 5px rgba(25, 26, 29, 1);
+  }
+
+#generate:active {
+    font-size: 95%;
   }
